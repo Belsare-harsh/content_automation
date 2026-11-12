@@ -1,0 +1,140 @@
+{
+  "run_id": "20261111-discovery-scan-2026-11-11",
+  "angle_id": "A1",
+  "topic": "SIP in a falling-market month: contributions kept rising while SIP assets fell",
+  "format": "carousel",
+  "core_message": "In September 2026 SIP assets fell 4.1%, yet monthly SIP contributions still rose 0.6%.",
+  "key_points": [
+    {
+      "id": "K1",
+      "text": "SIP assets fell 4.1% to 17.86 lakh crore rupees in September 2026, mainly from market-value losses.",
+      "fact_ids": [
+        "F003"
+      ]
+    },
+    {
+      "id": "K2",
+      "text": "Monthly SIP contribution rose 0.6% to 32,490 crore rupees in the same month.",
+      "fact_ids": [
+        "F002"
+      ]
+    },
+    {
+      "id": "K3",
+      "text": "Contributing SIP accounts rose to 10.06 crore from 10.02 crore.",
+      "fact_ids": [
+        "F004"
+      ]
+    }
+  ],
+  "audience": "MFD explaining September 2026 SIP data to a worried SIP client",
+  "required_terms": [
+    "SIP",
+    "assets",
+    "contributions",
+    "September"
+  ],
+  "out_of_scope": [
+    "scheme names",
+    "predictions",
+    "advice to start or stop a SIP",
+    "tax",
+    "returns forecast"
+  ],
+  "allowed_entities": [
+    "AMFI"
+  ],
+  "facts": [
+    {
+      "id": "F002",
+      "statement": "Monthly SIP contribution in September 2026 was ₹32,490 crore, up 0.6% from August 2026.",
+      "numbers": [
+        {
+          "raw": "32,490",
+          "as_of": "2026-09-30"
+        },
+        {
+          "raw": "0.6%",
+          "as_of": "2026-09-30"
+        }
+      ],
+      "source": {
+        "tier": "tier1",
+        "publisher": "AMFI",
+        "title": "AMFI Monthly Note, September 2026",
+        "url": "https://www.amfiindia.com/uploads/AMFI_Monthly_Note_September2026_554f6604b6.pdf",
+        "accessed": "2026-11-11",
+        "published": "September 2026 note"
+      },
+      "evidence_excerpt": "amounted to Rs 32,490 crore, marking a 0.6% rise from the preceding month",
+      "status": "approved",
+      "added_by": "ai",
+      "reviewed_by": "Ratnesh",
+      "review_note": "F009 'Total during FY' row appears to stop at August (differs from F010 by exactly September's contribution of Rs 32,490 crore); F010 chosen. F007 is older than 120 days; kept as a dated March 2026 comparison only. F006 limited to the two counts; footnote wording not read verbatim."
+    },
+    {
+      "id": "F003",
+      "statement": "SIP assets fell 4.1% month-on-month to ₹17.86 lakh crore in September 2026, from ₹18.62 lakh crore in August 2026. AMFI attributes the fall mainly to mark-to-market (MTM) losses.",
+      "numbers": [
+        {
+          "raw": "4.1%",
+          "as_of": "2026-09-30"
+        },
+        {
+          "raw": "17.86",
+          "as_of": "2026-09-30"
+        },
+        {
+          "raw": "18.62",
+          "as_of": "2026-09-30"
+        }
+      ],
+      "source": {
+        "tier": "tier1",
+        "publisher": "AMFI",
+        "title": "AMFI Monthly Note, September 2026",
+        "url": "https://www.amfiindia.com/uploads/AMFI_Monthly_Note_September2026_554f6604b6.pdf",
+        "accessed": "2026-11-11",
+        "published": "September 2026 note"
+      },
+      "evidence_excerpt": "reduced 4.1% on a month-on-month basis mainly due to MTM losses",
+      "status": "approved",
+      "added_by": "ai",
+      "reviewed_by": "Ratnesh",
+      "review_note": "F009 'Total during FY' row appears to stop at August (differs from F010 by exactly September's contribution of Rs 32,490 crore); F010 chosen. F007 is older than 120 days; kept as a dated March 2026 comparison only. F006 limited to the two counts; footnote wording not read verbatim."
+    },
+    {
+      "id": "F004",
+      "statement": "Contributing SIP accounts rose to 10.06 crore in September 2026, from 10.02 crore in August 2026.",
+      "numbers": [
+        {
+          "raw": "10.06",
+          "as_of": "2026-09-30"
+        },
+        {
+          "raw": "10.02",
+          "as_of": "2026-09-30"
+        }
+      ],
+      "source": {
+        "tier": "tier1",
+        "publisher": "AMFI",
+        "title": "AMFI Monthly Note, September 2026",
+        "url": "https://www.amfiindia.com/uploads/AMFI_Monthly_Note_September2026_554f6604b6.pdf",
+        "accessed": "2026-11-11",
+        "published": "September 2026 note"
+      },
+      "evidence_excerpt": "active SIP accounts, which rose to 10.06 crore in September",
+      "status": "approved",
+      "added_by": "ai",
+      "reviewed_by": "Ratnesh",
+      "review_note": "F009 'Total during FY' row appears to stop at August (differs from F010 by exactly September's contribution of Rs 32,490 crore); F010 chosen. F007 is older than 120 days; kept as a dated March 2026 comparison only. F006 limited to the two counts; footnote wording not read verbatim."
+    }
+  ],
+  "compiled_from": {
+    "fact_ledger_sha256": "093052f3d873d15789a1987b3d9bc4a59e332bf9adbf08942f8c305812f6bc41",
+    "angles_sha256": "e8795fa43b33c540ed2b62f9101371c1841237e75e5ee00632849247413a3aa4",
+    "selected_by": "Ratnesh",
+    "compiled_on": "2026-11-11T11:53:11+00:00"
+  }
+}

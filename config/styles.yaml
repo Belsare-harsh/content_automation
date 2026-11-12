@@ -1,0 +1,49 @@
+# Art styles step 5 may use. Each style has a renderer in tools/styles/<name>/ and the same text checks as the plain design.
+# Pick the style from the SOUL brief (reader, job, schema); record the choice and the reason in the page plan.
+# STATUS: trial. Content team to approve which styles are allowed for which pillars.
+default: plain            # tools/design.py
+styles:
+  plain:
+    renderer: tools/design.py
+    formats: [carousel, minimalist, infographics, presentation, one_pager, reels, videos]
+    fits: "Any piece; the safe fallback."
+  risograph:
+    renderer: tools/styled_design.py (tools/styles/risograph)
+    source: "Lemo-Opuscar 'Risograph Print' style (MIT code); our own compliance rules added"
+    formats: [carousel, reels_short]
+    inks: {plate1: "#3D5588 Federal Blue (all words, numbers, silhouettes)", plate2: "#FFB511 Sunflower (sun, warmth)"}
+    paper: "#F4EEE2"
+    fits: "Human-moment pieces: everyday scenes (salary day, family, home), calm or explain jobs, data zoom. First used: rmwdezgf7."
+    scenes: [morning, windows, noon, sheets, tower, overprint, dusk]
+    rules:
+      - "Words and numbers print on plate 1 only, solid, in a separate pass with no pinholes and 1 px registration."
+      - "Words sit on paper or a paper knockout panel, never on halftone, sunflower or an overprint."
+      - "No red ink: it reads as loss in Indian finance content."
+      - "Decoration may not look like a chart, an arrow up or down, or a count (windows and dots are 'many homes', never a number)."
+      - "Use the full overprint once per piece, as a blue tint over solid sunflower; blue solid over sunflower solid is mud."
+      - "A figure inside a window needs no paper halo; a halo ellipse reads as a white blob."
+      - "No real brands, no AMFI or SEBI logos, no rupee notes or coins."
+      - "Check every final page at 100 % for the disclosure strip's legibility."
+      - "Reels: one world, one camera move. Zoom out from one phone to one window to a lit city (data zoom); return to the same window at the end so the reel loops."
+      - "Reels: words print with a roller sweep (8 frames); a number landing gets a registration kick on the art plates only, never on the type."
+      - "Reels: grain boils on twos (12 fps); camera moves on ones (30 fps)."
+      - "Reels: canvas text must wait for the font (document.fonts.load with the rupee sign), or frames fall back to a serif."
+    reel_renderer: tools/remotion (composition RisoReel, props in src/riso/reel-<run>.json)
+  silent_film:
+    renderer: tools/remotion (composition SilentReel, props in src/silent/silent-<run>.json)
+    source: "Lemo-Opuscar 'Silent Film' style (MIT code: film.ts, cards.ts); our own compliance rules added"
+    formats: [reels_short]
+    fits: "Data-zoom and 'one month vs the whole picture' stories; calm or explain jobs. The film-frame metaphor carries the idea (one frame vs the whole film)."
+    fonts: "Playfair Display (OFL; latin-ext carries the rupee sign)"
+    rules:
+      - "Numbers and words live only on intertitle cards; film frames carry pictures, never labels or charts."
+      - "Every card line auto-shrinks to 78% of the card width; never fix overflow by hand."
+      - "Scratches and dust are lighter on cards than on scenes so numbers stay readable."
+      - "Disclosure: a persistent brass plaque under the screen on every frame; its text shrinks to fit the slot text."
+      - "One camera idea per reel: a light table of film frames, zoom out from one lit frame to the whole strip."
+      - "Iris in on the scene, iris out over the last 18 frames."
+      - "Transitions must feel natural (user feedback on v1: style great, transitions not). Avoid hard cuts card to card; use cross-dissolves between cards, an iris or fade through black on story turns, and let camera moves carry across a cut."
+      - "Score: original, upright piano (VSCO 2 CE, CC0) plus a synthesised projector purr; no copyrighted silent-film music."
+      - "Reviewer lessons: 'not the whole film' and 'watch the whole film' read as 'the dip doesn't matter / keep investing'. Use neutral observation ('Look at more than one.')."
+    choose_when: "The carousel used another style. A reel should get its own style matched to its story metaphor, not a copy of the carousel look."
+

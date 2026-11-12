@@ -1,0 +1,146 @@
+{
+  "type": "object",
+  "required": [
+    "facts"
+  ],
+  "properties": {
+    "facts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "statement",
+          "source",
+          "status"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^F\\d{3}$"
+          },
+          "statement": {
+            "type": "string",
+            "minLength": 10
+          },
+          "numbers": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "raw"
+              ],
+              "properties": {
+                "raw": {
+                  "type": "string"
+                },
+                "as_of": {
+                  "type": "string",
+                  "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+                }
+              }
+            }
+          },
+          "source": {
+            "type": "object",
+            "required": [
+              "tier",
+              "publisher",
+              "title",
+              "accessed"
+            ],
+            "properties": {
+              "tier": {
+                "enum": [
+                  "tier1",
+                  "tier2",
+                  "tier3",
+                  "internal"
+                ]
+              },
+              "publisher": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string"
+              },
+              "published": {
+                "type": "string"
+              },
+              "accessed": {
+                "type": "string",
+                "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+              },
+              "provided_by": {
+                "type": "string"
+              },
+              "file": {
+                "type": "string"
+              }
+            }
+          },
+          "evidence_excerpt": {
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "proposed",
+              "approved",
+              "rejected",
+              "lead_only"
+            ]
+          },
+          "added_by": {
+            "enum": [
+              "ai",
+              "human"
+            ]
+          },
+          "reviewed_by": {
+            "type": "string"
+          },
+          "review_note": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "conflicts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "fact_ids",
+          "description"
+        ],
+        "properties": {
+          "fact_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "description": {
+            "type": "string"
+          },
+          "resolution": {
+            "type": "string"
+          },
+          "resolved_by": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "open_questions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

@@ -1,0 +1,164 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>SIP salary day · risograph carousel</title>
+<style>
+@font-face{font-family:'Bricolage';src:url(fonts/bricolage-grotesque-latin-wght-normal.woff2) format('woff2');font-weight:200 800;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:block}
+@font-face{font-family:'Bricolage';src:url(fonts/bricolage-grotesque-latin-ext-wght-normal.woff2) format('woff2');font-weight:200 800;unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:block}
+html,body{margin:0;background:#222}canvas{display:block}
+</style></head><body>
+<canvas id="out" width="1080" height="1350"></canvas>
+<script type="module">
+// Risograph carousel page. Two plates: R = Federal Blue (words, numbers, silhouettes), G = Sunflower (sun, warmth).
+// Art and type print in separate passes: the art with full grain; the type solid, no pinholes, 1 px registration, so every word stays legible.
+import { makeRiso } from './lib/riso.js';
+const W = 1080, H = 1350, M = 86, STRIP = 74;
+const BLUE = [61, 85, 136], SUN = [255, 181, 17], PAPER = [244, 238, 226], WHITE = [255, 255, 255];
+const q = new URLSearchParams(location.search), PI = Math.PI;
+const content = await (await fetch('content.json')).json();
+const pg = content.pages[+(q.get('p') || 0)];
+await Promise.all(['500', '800'].map(w => document.fonts.load(`${w} 40px Bricolage`, '₹ Aa 0123')));
+if (!document.fonts.check('800 40px Bricolage', '₹')) throw new Error('font not loaded');
+
+const mk = () => { const c = document.createElement('canvas'); c.width = W; c.height = H; return c; };
+const artC = mk(), typeC = mk();
+const a = artC.getContext('2d'), t = typeC.getContext('2d');
+const ink = (b = 0, y = 0) => `rgb(${Math.round(b * 255)},${Math.round(y * 255)},0)`;
+a.fillStyle = ink(); a.fillRect(0, 0, W, H); t.fillStyle = ink(); t.fillRect(0, 0, W, H);
+
+// ---------- art helpers (plate canvas a) ----------
+const circ = (x, y, r, c) => { a.beginPath(); a.arc(x, y, r, 0, PI * 2); a.fillStyle = c; a.fill(); };
+const rect = (x, y, w, h, c) => { a.fillStyle = c; a.fillRect(x, y, w, h); };
+const rr = (x, y, w, h, r, c) => { a.beginPath(); a.roundRect(x, y, w, h, r); a.fillStyle = c; a.fill(); };
+const over = fn => { a.globalCompositeOperation = 'lighter'; fn(); a.globalCompositeOperation = 'source-over'; };
+const KO = ink(0, 0);   // knockout = paper
+
+function city(y0, lit) {          // blue skyline from y0 to the strip, windows lit in sunflower
+  const blocks = [[0, 180, 190], [170, 140, 260], [300, 170, 150], [455, 120, 300], [560, 190, 210], [740, 130, 330], [860, 220, 230]];
+  for (const [x, w, h] of blocks) {
+    rect(x, y0 + 330 - h, w, H - (y0 + 330 - h), ink(1));
+    for (let yy = y0 + 350 - h; yy < H - STRIP - 40; yy += 46) for (let xx = x + 18; xx < x + w - 30; xx += 38) {
+      const on = ((xx * 7 + yy * 3) % 5) < lit;
+      rect(xx, yy, 18, 24, on ? ink(0, 1) : ink(.55));
+    }
+  }
+}
+function person(x, y, s, phoneLit) {   // small figure at a window, phone in hand
+  a.save(); a.translate(x, y); a.scale(s, s);
+  // paper halo
+  circ(0, -170, 34, ink(1));                          // head
+  rr(-48, -128, 96, 170, 40, ink(1));                 // body
+  a.lineCap = 'round'; a.strokeStyle = ink(1); a.lineWidth = 22;
+  a.beginPath(); a.moveTo(30, -100); a.quadraticCurveTo(70, -60, 52, -118); a.stroke();   // arm
+  rr(36, -170, 34, 58, 7, ink(1));                    // phone body
+  rr(41, -164, 24, 44, 4, phoneLit ? ink(0, 1) : KO); // screen
+  a.restore();
+}
+function windowFrame(x, y, w, h) {
+  rect(x - 18, y - 18, w + 36, h + 36, ink(1));
+  rect(x, y, w, h, KO);
+  rect(x + w / 2 - 7, y, 14, h, ink(1)); rect(x, y + h * .45, w, 12, ink(1));
+}
+
+// ---------- scenes ----------
+const ART_TOP = 700;    // text lives above, on paper
+const scenes = {
+  morning() {
+    circ(800, 830, 210, ink(0, 1));                                   // rising sun
+    rect(0, 1000, W, H, ink(.35));                                    // ground tint
+    city(780, 2);
+    windowFrame(150, 860, 300, 330);
+    person(300, 1165, .9, true);
+  },
+  windows() {
+    rect(0, ART_TOP, W, H, ink(.25));                                 // evening sky tint
+    city(ART_TOP + 40, 4);
+  },
+  noon() {
+    circ(540, 1010, 300, ink(0, 1));                                  // noon sun
+    over(() => rect(0, 1080, W, H, ink(1)));                          // ground overprints the sun's lower half
+    rect(0, 1080, W, 6, ink(1));
+  },
+  sheets() {
+    for (let i = 5; i >= 0; i--) {
+      const x = 250 + i * 14, y = 760 + i * 46;
+      rr(x, y, 560, 380, 10, ink(1)); rr(x + 6, y + 6, 548, 368, 6, i ? ink(.3) : KO);
+    }
+    a.strokeStyle = ink(1); a.lineWidth = 26; a.lineCap = 'round'; a.lineJoin = 'round';
+    a.beginPath(); a.moveTo(440, 940); a.lineTo(510, 1010); a.lineTo(640, 860); a.stroke();   // tick (not a logo)
+    over(() => circ(820, 800, 70, ink(0, 1)));
+  },
+  tower() {
+    circ(860, 820, 120, ink(0, 1));
+    const x = 300, w = 480;
+    for (let i = 0, y = H - STRIP - 64; y > 760; i++, y -= 64) {
+      rect(x, y, w, 64, ink(i % 2 ? .45 : 1));
+      for (let xx = x + 40; xx < x + w - 40; xx += 70) rect(xx, y + 18, 34, 28, ink(0, 1));
+    }
+    rect(x - 40, H - STRIP - 20, w + 80, 20, ink(1));
+  },
+  overprint() {
+    rect(0, 0, W, H, ink(0, 1)); over(() => rect(0, 0, W, H, ink(.42)));   // the one overprint: blue tint over solid sunflower (the brightest mix)
+  },
+  dusk() {
+    rect(0, ART_TOP, W, H, ink(0, .3));                               // warm dusk sky
+    circ(800, 1000, 210, ink(0, 1));                                  // setting sun
+    rect(0, 1000, W, H, ink(.35));
+    city(780, 4);
+    windowFrame(150, 860, 300, 330);
+    person(300, 1165, .9, true);
+  },
+};
+scenes[pg.scene]();
+
+// ---------- type (plate canvas t, R = blue) ----------
+const layout = [];
+function wrap(ctx, s, max) { const w = s.split(' '), L = []; let c = ''; for (const x of w) { const tr = c ? c + ' ' + x : x; if (ctx.measureText(tr).width <= max || !c) c = tr; else { L.push(c); c = x; } } if (c) L.push(c); return L; }
+function block(role, s, x, y, maxW, size, weight, opts = {}) {
+  let fs = size, lines;
+  for (; fs >= 22; fs -= 2) { t.font = `${weight} ${fs}px Bricolage`; lines = wrap(t, s, maxW); if (!opts.maxH || lines.length * fs * 1.18 <= opts.maxH) break; }
+  const lh = Math.round(fs * 1.18), h = lines.length * lh;
+  const yy = opts.vcenter ? Math.round(y + (opts.maxH - h) / 2) : y;
+  if (opts.panel) {    // paper knockout panel under the type, on the art plate
+    const p = opts.panel; const wMax = Math.max(...lines.map(l => t.measureText(l).width));
+    rr(x - p, yy - p, (opts.fullW ? maxW : wMax) + 2 * p, h + 2 * p - (lh - fs) * .6, opts.radius ?? 0, KO);
+  }
+  t.fillStyle = ink(1); t.textBaseline = 'top'; t.textAlign = opts.center ? 'center' : 'left';
+  lines.forEach((l, i) => t.fillText(l, opts.center ? x + maxW / 2 : x, yy + i * lh));
+  layout.push({ role, text: s, lines, x, y: yy, w: maxW, h, font_size: fs, font_weight: weight, font_family: 'Bricolage Grotesque', line_height: lh / fs, color: '#3D5588', align: opts.center ? 'center' : 'left', beat_id: role === 'disclosure' ? 'B00' : pg.beat });
+  return yy + h;
+}
+const body = pg.text;
+// top band: logo slot (empty box, filled at co-branding) and page counter dots
+rect(0, 0, W, 210, KO);
+t.strokeStyle = ink(1); t.lineWidth = 3; t.setLineDash([14, 10]); t.strokeRect(757, 70, 237, 94); t.setLineDash([]);
+const n = content.pages.length, i0 = content.pages.indexOf(pg);
+for (let k = 0; k < n; k++) { t.beginPath(); t.arc(M + 12 + k * 34, 117, k === i0 ? 11 : 6, 0, PI * 2); t.fillStyle = ink(1); t.fill(); }
+
+if (pg.kind === 'recap') {
+  block('script', body, M + 30, 330, W - 2 * M - 60, 70, 800, { panel: 54, radius: 28, maxH: 640, fullW: true, vcenter: true });
+} else if (pg.highlight) {
+  rect(0, 210, W, ART_TOP - 210, KO);
+  let y = block('highlight', pg.highlight, M, 250, W - 2 * M, pg.highlight.length > 12 ? 118 : 150, 800);
+  block('script', body, M, y + 34, W - 2 * M, 54, 500, { maxH: ART_TOP - y - 60 });
+} else {
+  rect(0, 210, W, ART_TOP - 210, KO);
+  const big = pg.kind === 'hook' || pg.kind === 'cta';
+  block('script', body, M, 250, W - 2 * M, big ? 72 : 60, big ? 800 : 600, { maxH: ART_TOP - 290 });
+}
+// disclosure strip: paper knockout, type on the blue plate
+rect(0, H - STRIP, W, STRIP, KO);
+block('disclosure', content.slot, M, H - STRIP + 24, W - 2 * M, 22, 500, { center: true, maxH: 30 });
+
+// ---------- print ----------
+const out = document.getElementById('out');
+const pr = makeRiso(out, W, H);
+const ARTOPT = { inks: [BLUE, SUN, [255, 255, 255]], paper: PAPER, off: [[2, -1], [-2, 2], [0, 0]], rot: [0.0006, -0.0005, 0], ang: [0.2618, 1.309, 0], period: 7, seed: 3 + i0, sheet: 1 + i0 * .7, gate: [1, 1, 0] };
+pr(artC, ARTOPT);
+const artPNG = out.toDataURL('image/png');
+const artImg = await createImageBitmap(out);
+pr(typeC, { inks: [BLUE, SUN, [255, 255, 255]], paper: [255, 255, 255], off: [[1, 0], [0, 0], [0, 0]], period: 7, grain: .35, pin: 0, gate: [1, 0, 0], sheet: 2 + i0 });
+const typeImg = await createImageBitmap(out);
+const fin = mk(), f = fin.getContext('2d');
+f.drawImage(artImg, 0, 0); f.globalCompositeOperation = 'multiply'; f.drawImage(typeImg, 0, 0);
+const typeOnly = mk(), tc = typeOnly.getContext('2d'); tc.drawImage(typeImg, 0, 0);
+window.DONE = { id: pg.id, layout, art: artPNG, final: fin.toDataURL('image/png') };
+</script></body></html>

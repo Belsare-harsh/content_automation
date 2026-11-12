@@ -1,0 +1,83 @@
+{
+ "run": "rmwdezgf7",
+ "status": "draft reel; each card passed independent fact review against F001, F003, F004",
+ "slot": "{{PRINCIPAL_NAME}} ({{PRINCIPAL_REG_NO}}) | {{AGENT_NAME}} ({{AGENT_REG_NO}})",
+ "cards": [
+  {
+   "line": "Salary day.",
+   "fact_ids": []
+  },
+  {
+   "line": "How many others got one?",
+   "fact_ids": []
+  },
+  {
+   "big": "999.87 lakh",
+   "line": "SIP accounts put money in.",
+   "small": "October 2026",
+   "fact_ids": [
+    "F004"
+   ]
+  },
+  {
+   "big": "₹32,160 crore",
+   "line": "collected through SIPs in one month.",
+   "small": "October 2026",
+   "fact_ids": [
+    "F001"
+   ]
+  },
+  {
+   "big": "₹17,68,217 crore",
+   "line": "held through SIPs, October 2026.",
+   "fact_ids": [
+    "F003"
+   ]
+  },
+  {
+   "line": "Save this for your next salary day.",
+   "small": "Source: AMFI, October 2026",
+   "fact_ids": [
+    "F001"
+   ]
+  }
+ ],
+ "cuts": [
+  53,
+  131,
+  225,
+  319,
+  413
+ ],
+ "hits": [
+  21,
+  138,
+  233,
+  327
+ ],
+ "frames": 525,
+ "audio": "riso/bed.wav",
+ "facts_used": {
+  "F001": {
+   "statement": "AMFI's SIP page says the total amount collected through SIP during October 2026 was ₹32,160 crore.",
+   "nums": [
+    "32,160",
+    "October 2026"
+   ]
+  },
+  "F003": {
+   "statement": "AMFI's SIP data gives SIP AUM of ₹17,68,217 crore for October 2026.",
+   "nums": [
+    "17,68,217",
+    "October 2026"
+   ]
+  },
+  "F004": {
+   "statement": "AMFI's SIP data gives 999.87 lakh contributing SIP accounts for October 2026.",
+   "nums": [
+    "999.87",
+    "October 2026"
+   ]
+  }
+ }
+}

@@ -1,0 +1,96 @@
+{
+  "core_message": "In September 2026 SIP assets fell 4.1%, yet monthly SIP contributions still rose 0.6%.",
+  "locked_brief_sha256": "4188feab0e0fb931e85c00f3a48e1e665007a4a9be5b3ccf4d2d6c16f77f121f",
+  "format": "carousel",
+  "beats": [
+    {
+      "id": "B01",
+      "kind": "hook",
+      "text": "In September, SIP assets fell. Did SIP contributions fall too?",
+      "key_point": null,
+      "fact_ids": [
+        "F003"
+      ],
+      "visual_note": "Cover slide: the question only, no figures"
+    },
+    {
+      "id": "B02",
+      "kind": "point",
+      "text": "SIP assets fell 4.1% in September 2026, to ₹17.86 lakh crore.",
+      "key_point": "K1",
+      "fact_ids": [
+        "F003"
+      ],
+      "visual_note": "Large 4.1% with a down arrow"
+    },
+    {
+      "id": "B03",
+      "kind": "proof",
+      "text": "AMFI attributes the fall mainly to mark-to-market (MTM) losses.",
+      "key_point": "K1",
+      "fact_ids": [
+        "F003"
+      ],
+      "visual_note": "Quote-style slide attributed to AMFI"
+    },
+    {
+      "id": "B04",
+      "kind": "point",
+      "text": "Monthly SIP contributions rose 0.6% in September 2026, to ₹32,490 crore.",
+      "key_point": "K2",
+      "fact_ids": [
+        "F002"
+      ],
+      "visual_note": "Large 0.6% with an up arrow"
+    },
+    {
+      "id": "B05",
+      "kind": "proof",
+      "text": "That is up from August 2026.",
+      "key_point": "K2",
+      "fact_ids": [
+        "F002"
+      ],
+      "visual_note": "Simple August to September comparison, no extra figures"
+    },
+    {
+      "id": "B06",
+      "kind": "point",
+      "text": "Contributing SIP accounts rose to 10.06 crore in September 2026.",
+      "key_point": "K3",
+      "fact_ids": [
+        "F004"
+      ],
+      "visual_note": "Large 10.06 crore"
+    },
+    {
+      "id": "B07",
+      "kind": "proof",
+      "text": "In August 2026, contributing SIP accounts stood at 10.02 crore.",
+      "key_point": "K3",
+      "fact_ids": [
+        "F004"
+      ],
+      "visual_note": "August 10.02 crore beside September 10.06 crore"
+    },
+    {
+      "id": "B08",
+      "kind": "recap",
+      "text": "In September 2026 SIP assets fell 4.1%, yet monthly SIP contributions still rose 0.6%.",
+      "key_point": null,
+      "fact_ids": [
+        "F002",
+        "F003"
+      ],
+      "visual_note": "Summary slide with the locked message"
+    },
+    {
+      "id": "B09",
+      "kind": "cta",
+      "text": "Save this to explain September's SIP data to your clients. Source: AMFI.",
+      "key_point": null,
+      "fact_ids": [],
+      "visual_note": "Closing slide with AMFI source line"
+    }
+  ]
+}

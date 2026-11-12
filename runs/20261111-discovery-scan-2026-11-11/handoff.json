@@ -1,0 +1,62 @@
+{
+  "run_id": "20261111-discovery-scan-2026-11-11",
+  "completed": "2026-11-11T11:56:42+00:00",
+  "format": "carousel",
+  "files": {
+    "01_research/topic.json": "86fcc8bb032b83cf89a555ad42c6fbb42487b154be54b406a878eed17b8bbd1d",
+    "01_research/fact_ledger.json": "093052f3d873d15789a1987b3d9bc4a59e332bf9adbf08942f8c305812f6bc41",
+    "02_ideation/angles.json": "e8795fa43b33c540ed2b62f9101371c1841237e75e5ee00632849247413a3aa4",
+    "03_approval/locked_brief.json": "4188feab0e0fb931e85c00f3a48e1e665007a4a9be5b3ccf4d2d6c16f77f121f",
+    "04_script/storyline.json": "544e888dc37ca0af7a0d7498eb2c2f204cf7d10bbdcbf029dd94f0e2b8e5875e",
+    "04_script/script.json": "da23611522161ffde510c08e435c7feb2a740164e3df2b8d206203826b4b556f",
+    "04_script/semantic_review.json": "c2bb91a00c0d9a9801c288016f75e2ee8f7cd43f2e3806cc242af3a3d2e395e3"
+  },
+  "approvals": [
+    {
+      "seq": 2,
+      "ts": "2026-11-11T11:51:52+00:00",
+      "gate": "G1",
+      "decision": "approve",
+      "by": "Ratnesh",
+      "role": "researcher",
+      "note": "Facts F001-F008,F010 approved; F009 rejected (conflict resolved in favour of F010). Default scope kept. Decision relayed by Deepesh."
+    },
+    {
+      "seq": 3,
+      "ts": "2026-11-11T11:53:08+00:00",
+      "gate": "G2",
+      "decision": "angle_selected",
+      "by": "Ratnesh",
+      "role": "content_lead",
+      "note": "A1 none"
+    },
+    {
+      "seq": 4,
+      "ts": "2026-11-11T11:53:08+00:00",
+      "gate": "G2",
+      "decision": "approve",
+      "by": "Ratnesh",
+      "role": "content_lead",
+      "note": "Angle A1 selected, no edits. Relayed by Deepesh."
+    },
+    {
+      "seq": 5,
+      "ts": "2026-11-11T11:55:09+00:00",
+      "gate": "G3",
+      "decision": "approve",
+      "by": "Ratnesh",
+      "role": "topic_approver",
+      "note": "Locked brief for angle A1 approved. Relayed by Deepesh."
+    },
+    {
+      "seq": 6,
+      "ts": "2026-11-11T11:56:42+00:00",
+      "gate": "G4",
+      "decision": "approve",
+      "by": "Ratnesh",
+      "role": "content_lead",
+      "note": "Carousel script approved against evidence table. Relayed by Deepesh."
+    }
+  ],
+  "next_step": "5: Visual Direction. Input is script.json and locked_brief.json only."
+}

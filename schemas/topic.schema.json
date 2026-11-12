@@ -1,0 +1,47 @@
+{
+  "type": "object",
+  "required": [
+    "topic",
+    "mode",
+    "picked_by",
+    "picked_on",
+    "scope_notes"
+  ],
+  "properties": {
+    "topic": {
+      "type": "string",
+      "minLength": 5
+    },
+    "mode": {
+      "enum": [
+        "topic_driven",
+        "discovery"
+      ]
+    },
+    "picked_by": {
+      "type": "string",
+      "minLength": 2
+    },
+    "picked_on": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+    },
+    "scope_notes": {
+      "type": "string",
+      "minLength": 10
+    },
+    "audience": {
+      "type": "string"
+    },
+    "seed_sources": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "discovery_candidates": {
+      "type": "array"
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

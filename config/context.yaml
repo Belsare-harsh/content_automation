@@ -1,0 +1,19 @@
+# Context Claude reads before ideation (step 2) and scriptwriting (step 4).
+# STATUS: placeholders. Ratnesh to supply the real audience notes, tone, industry messaging patterns, benchmarks and examples.
+# Nothing here is a fact about the market. Facts come only from approved research.
+status: placeholder-awaiting-ratnesh
+audience:
+  primary: "Mutual fund distributors (MFDs) in India sharing content with their own investor clients"
+  also: "Registered investment advisors (RIAs)"
+tone:
+  style: "Plain, calm, factual. Short sentences. One idea per slide."
+  avoid: "Hype, urgency, fear, comparisons that rank products, promises about results"
+messaging_patterns: []       # Ratnesh: add examples of how strong industry content is framed
+benchmarks: []               # Ratnesh: add examples of content that worked, with why
+domain_restrictions: []      # Ratnesh: add anything the team must never say that is not already in compliance-rules.yaml
+content_pillars:             # DRAFT by Claude for Ratnesh/content team to edit or replace. Themes only, no facts.
+  - "Industry data explained (monthly AMFI figures, what each number means)"
+  - "Regulation made simple (what changed, what stayed the same)"
+  - "Client conversations (questions investors ask during market moves, and how to explain)"
+  - "Product literacy (how to read costs, risk labels, categories)"
+  - "Calendar moments (budget, financial year end, filing windows)"

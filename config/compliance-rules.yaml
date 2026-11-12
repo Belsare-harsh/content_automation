@@ -1,0 +1,73 @@
+# Claims PRE-CHECK used at Step 4 (script). This is NOT the full Step 9 compliance review.
+# Its job: stop a script from ever containing a claim that Step 9 would have to block.
+#
+# STATUS: starter heuristics by Claude. The compliance owner must review this file.
+# Disclaimer text below is currently a DUMMY placeholder so the engine can run end to end. It must be copied word for word from the official
+# SEBI / AMFI documents by the compliance owner. The engine will not invent or paraphrase it, and it
+# blocks any script that makes a performance claim while the text is empty.
+status: dummy-for-now
+owner: null                  # name of the compliance owner who maintains this file
+last_reviewed: null
+
+blocked_phrases:             # any of these in script text = block (case-insensitive)
+  - guaranteed
+  - assured return
+  - assured returns
+  - risk-free
+  - risk free
+  - zero risk
+  - no risk
+  - sure shot
+  - sureshot
+  - double your money
+  - cannot lose
+  - can't lose
+  - 100% safe
+  - best mutual fund
+  - best fund
+  - top fund
+
+advisory_terms:              # flagged as warnings for the human reviewer, not blocks
+  - best
+  - top
+  - number one
+  - no.1
+  - highest
+  - lowest risk
+  - outperform
+  - always
+  - never
+  - everyone
+  - all investors
+
+performance_triggers:        # a number plus any of these words = a performance claim
+  - return
+  - returns
+  - cagr
+  - xirr
+  - performance
+  - performed
+  - outperformed
+  - delivered
+  - grew
+
+disclaimers:
+  past_performance:
+    text: "DUMMY DISCLAIMER (placeholder, not official wording): Past performance may or may not be sustained in the future."   # REPLACE with the exact official text from the compliance owner
+    applies_when: performance_claim
+  # add more entries here, e.g. a risk statement, when the compliance owner provides the wording
+
+entity_check:
+  # Scheme or fund-house names must be listed in the locked brief's allowed_entities.
+  # Anything that looks like "<Name> Fund" / "<Name> Mutual Fund" / "<Name> AMC" and is not listed = block.
+  generic_leading_words: [The, A, An, Many, Most, Some, Every, Your, Our, Any, All, This, That, Each, These, Those]
+
+# SEBI social media disclosure. Source: SEBI circular HO/(79)2026-MIRSD-PODMMC dated 26 Feb 2026, effective for content
+# uploaded on or after 1 May 2026. Wording summarised from secondary sources: the compliance owner must confirm it against sebi.gov.in.
+# For an agent (such as an MFD) the START of every piece shows the principal entity's registered name and number, then the agent's own.
+# Those details differ for every distributor, so scripts only carry a fixed placeholder slide. Claude never writes real names or numbers.
+# They are filled in at co-branding, and the finished design is checked for them (step 5 onward).
+sebi_disclosure:
+  required: true
+  slot_text: "{{PRINCIPAL_NAME}} ({{PRINCIPAL_REG_NO}}) | {{AGENT_NAME}} ({{AGENT_REG_NO}})"
+  confirmed_by: null

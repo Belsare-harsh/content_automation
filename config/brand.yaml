@@ -1,0 +1,46 @@
+# Visual brand for step 5 (design) and step 6 (animation).
+# STATUS: placeholder. Replace colours, fonts and logo slot with TheFinPedia's real brand assets
+# (Harsh's SEBI base templates). The engine warns on every run while this says placeholder.
+status: placeholder-awaiting-brand-assets
+
+colors:
+  background: "#F6F1E7"     # page background
+  ink: "#14213D"            # main text
+  accent: "#1F7A5C"         # highlighted figure, rules
+  muted: "#5B6472"          # secondary text
+  panel: "#FFFFFF"          # recap / one-pager boxes
+  strip_bg: "#14213D"       # SEBI disclosure strip
+  strip_ink: "#FFFFFF"
+
+fonts:                      # file paths used for previews; family names are written into Fabric/Figma
+  heading: {family: "Inter", weight: 700, file: "/usr/share/fonts/opentype/inter/Inter-Bold.otf"}
+  body:    {family: "Inter", weight: 500, file: "/usr/share/fonts/opentype/inter/Inter-Medium.otf"}
+  small:   {family: "Inter", weight: 400, file: "/usr/share/fonts/opentype/inter/Inter-Regular.otf"}
+
+# Page sizes in pixels per content type.
+canvas:
+  carousel:     {w: 1080, h: 1350}
+  minimalist:   {w: 1080, h: 1080}
+  infographics: {w: 1080, h: 1920}
+  presentation: {w: 1920, h: 1080}
+  one_pager:    {w: 1240, h: 1754}   # A4 at 150 dpi
+  reels:        {w: 1080, h: 1920}
+  videos:       {w: 1920, h: 1080}
+
+margin: 0.08          # safe margin as a share of the shorter side; text must stay inside it
+min_contrast: 4.5     # WCAG AA for text against its background
+
+# Where the SEBI disclosure strip goes. The text itself always comes from compliance-rules / the script's
+# disclosure beat and is filled per distributor at co-branding. Compliance owner to confirm placement.
+disclosure_placement: every_page    # every_page | first_page
+
+# Slot for the distributor's logo, filled at co-branding (step 9). Never text.
+logo_slot: {w: 0.22, h: 0.07}       # share of page width / height, top-right
+
+# Step 6 timing (reels/videos)
+video:
+  fps: 30
+  seconds_per_word: 0.42
+  min_scene_seconds: 2.5
+  max_scene_seconds: 7
+  disclosure_seconds: 2.5

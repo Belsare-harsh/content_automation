@@ -1,0 +1,50 @@
+{
+  "type": "object",
+  "required": [
+    "core_message",
+    "locked_brief_sha256",
+    "arc"
+  ],
+  "properties": {
+    "core_message": {
+      "type": "string"
+    },
+    "locked_brief_sha256": {
+      "type": "string"
+    },
+    "arc": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "object",
+        "required": [
+          "act",
+          "purpose",
+          "key_point"
+        ],
+        "properties": {
+          "act": {
+            "enum": [
+              "hook",
+              "point",
+              "proof",
+              "recap",
+              "cta"
+            ]
+          },
+          "purpose": {
+            "type": "string",
+            "minLength": 8
+          },
+          "key_point": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

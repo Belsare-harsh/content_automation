@@ -1,0 +1,50 @@
+# Approved research sources for Step 1.
+# STATUS: DRAFT. Built from the sources the content team named (AMFI/SEBI, RBI/MoSPI, NSE/BSE, AMC sites).
+# Bhashwati Mam / content team must confirm, add and remove entries. The engine reads ONLY this file.
+#
+# Tiers decide what a source may be used for:
+#   tier1  - regulators, government, exchanges. A fact can be approved from these alone.
+#   tier2  - official sites of AMCs and other regulated entities. Valid for facts about THAT entity only.
+#   tier3  - reputable media. LEADS ONLY: use to find what to check, never as the source of a fact in a script.
+#   internal - material a human supplies (ASMF exports, team documents). Must name who supplied it.
+status: dummy-for-now      # real list to be confirmed by the content team
+confirmed_by: null          # set to a name when the content team has confirmed this list
+confirmed_on: null
+
+tier1:
+  - sebi.gov.in
+  - amfiindia.com
+  - rbi.org.in
+  - mospi.gov.in
+  - nseindia.com
+  - bseindia.com
+  - incometax.gov.in
+  - indiabudget.gov.in
+  - finmin.gov.in
+  - dpiit.gov.in             # from the list shared on 12 Nov (DPIIT); content team to confirm
+  - nism.ac.in               # NISM, SEBI-established; suited to education and definitions
+  - iepf.gov.in              # IEPFA, investor education
+  - pib.gov.in               # added from the team discussion (PIB); content team to confirm
+
+tier2:                       # DUMMY entries so the engine works for now. Replace with real AMC domains.
+  - dummy-amc.example.com
+  - dummy-fundhouse.example.com
+
+tier3_lead_only:          # Ratnesh also named Cafe Mutual and Moneycontrol. Kept lead-only until the team decides media may be a source of approved facts.
+  - cafemutual.com
+  - ibef.org                 # Government-backed but compiles other sources' data. Confirm the figure at the primary source.
+  - economictimes.indiatimes.com
+  - livemint.com
+  - business-standard.com
+  - moneycontrol.com
+  - financialexpress.com
+
+internal:
+  - label: "ASMF export"
+    note: "ASMF is desktop-only. A human exports from it and places the file in the run's 01_research/inputs/ folder."
+
+rules:
+  min_approved_facts: 4            # a brief with fewer approved facts is too thin to script from
+  min_tier1_facts: 2               # at least this many approved facts must come from tier1 or internal
+  max_excerpt_words: 25            # evidence excerpts stay short; store a paraphrase in `statement`
+  max_age_days_for_figures: 120    # a numeric fact older than this (by as_of) needs a human note to approve

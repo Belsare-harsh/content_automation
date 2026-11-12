@@ -1,0 +1,207 @@
+{
+  "angles": [
+    {
+      "id": "A1",
+      "title": "Assets fell, contributions did not",
+      "core_message": "In September 2026 SIP assets fell 4.1%, yet monthly SIP contributions still rose 0.6%.",
+      "key_points": [
+        {
+          "id": "K1",
+          "text": "SIP assets fell 4.1% to 17.86 lakh crore rupees in September 2026, mainly from market-value losses.",
+          "fact_ids": [
+            "F003"
+          ]
+        },
+        {
+          "id": "K2",
+          "text": "Monthly SIP contribution rose 0.6% to 32,490 crore rupees in the same month.",
+          "fact_ids": [
+            "F002"
+          ]
+        },
+        {
+          "id": "K3",
+          "text": "Contributing SIP accounts rose to 10.06 crore from 10.02 crore.",
+          "fact_ids": [
+            "F004"
+          ]
+        }
+      ],
+      "audience": "MFD explaining September 2026 SIP data to a worried SIP client",
+      "format": "carousel",
+      "why_now": "September 2026 AMFI data is the latest published; October is not out yet. Carousel suits a three-number contrast.",
+      "required_terms": [
+        "SIP",
+        "assets",
+        "contributions",
+        "September"
+      ],
+      "out_of_scope": [
+        "scheme names",
+        "predictions",
+        "advice to start or stop a SIP",
+        "tax",
+        "returns forecast"
+      ],
+      "allowed_entities": [
+        "AMFI"
+      ],
+      "risks": [
+        "No performance figure is shown, so no disclaimer is triggered; check at step 4.",
+        "AMFI does not explain why contributions rose, so the script must not say why."
+      ]
+    },
+    {
+      "id": "A2",
+      "title": "Same pattern, second time: March and September",
+      "core_message": "SIP assets fell in both March and September 2026, while monthly SIP contributions rose in both months.",
+      "key_points": [
+        {
+          "id": "K1",
+          "text": "March 2026: contribution rose 7.5% to 32,087 crore rupees while SIP assets fell 9.2%.",
+          "fact_ids": [
+            "F007"
+          ]
+        },
+        {
+          "id": "K2",
+          "text": "September 2026: contribution rose 0.6% to 32,490 crore rupees while SIP assets fell 4.1%.",
+          "fact_ids": [
+            "F002",
+            "F003"
+          ]
+        }
+      ],
+      "audience": "MFD giving clients a longer view than one month",
+      "format": "infographics",
+      "why_now": "A two-month comparison shows the pattern is not a one-off. Infographic suits side-by-side figures.",
+      "required_terms": [
+        "SIP",
+        "March",
+        "September",
+        "contributions"
+      ],
+      "out_of_scope": [
+        "scheme names",
+        "predictions",
+        "advice to start or stop a SIP",
+        "tax",
+        "causes not stated by AMFI"
+      ],
+      "allowed_entities": [
+        "AMFI"
+      ],
+      "risks": [
+        "F007 is older than 120 days and is approved only as a dated comparison; show its date clearly.",
+        "Two data points are not a trend; the script must not call it one."
+      ]
+    },
+    {
+      "id": "A3",
+      "title": "Who is still in: accounts, new SIPs, discontinued SIPs",
+      "core_message": "In September 2026, 63.26 lakh new SIPs were registered and 49.68 lakh were discontinued or completed.",
+      "key_points": [
+        {
+          "id": "K1",
+          "text": "63.26 lakh new SIPs were registered in September 2026.",
+          "fact_ids": [
+            "F006"
+          ]
+        },
+        {
+          "id": "K2",
+          "text": "49.68 lakh SIPs were discontinued or reached the end of their tenure.",
+          "fact_ids": [
+            "F006"
+          ]
+        },
+        {
+          "id": "K3",
+          "text": "Contributing SIP accounts stood at 10.06 crore.",
+          "fact_ids": [
+            "F004"
+          ]
+        }
+      ],
+      "audience": "MFD who wants a client-facing view of SIP participation",
+      "format": "reels",
+      "why_now": "Participation counts are the clearest answer to whether investors are staying invested.",
+      "required_terms": [
+        "SIP",
+        "registered",
+        "discontinued",
+        "September"
+      ],
+      "out_of_scope": [
+        "scheme names",
+        "predictions",
+        "advice to start or stop a SIP",
+        "tax",
+        "reasons for discontinuation"
+      ],
+      "allowed_entities": [
+        "AMFI"
+      ],
+      "risks": [
+        "The AMFI footnote on 'discontinued' was not read verbatim; the script may only state the two counts, and 'completed' must not be read as 'stopped early'.",
+        "Reels output is MP4."
+      ]
+    },
+    {
+      "id": "A4",
+      "title": "Why SIP exists: the AMFI explanation, plus September's numbers",
+      "core_message": "AMFI describes SIP as disciplined investing at regular intervals, and September 2026 contributions stayed above 32,000 crore rupees.",
+      "key_points": [
+        {
+          "id": "K1",
+          "text": "AMFI describes a SIP as investing a fixed amount at regular intervals instead of a lump sum.",
+          "fact_ids": [
+            "F001"
+          ]
+        },
+        {
+          "id": "K2",
+          "text": "AMFI says SIP supports rupee cost averaging and disciplined investing without timing the market.",
+          "fact_ids": [
+            "F008"
+          ]
+        },
+        {
+          "id": "K3",
+          "text": "September 2026 monthly SIP contribution was 32,490 crore rupees.",
+          "fact_ids": [
+            "F002"
+          ]
+        }
+      ],
+      "audience": "MFD explaining SIP basics to a first-time client during a volatile month",
+      "format": "minimalist",
+      "why_now": "Pairs the standard definition with the latest figure; low-risk and short.",
+      "required_terms": [
+        "SIP",
+        "AMFI",
+        "regular",
+        "September"
+      ],
+      "out_of_scope": [
+        "scheme names",
+        "predictions",
+        "advice to start or stop a SIP",
+        "tax",
+        "guaranteed outcomes"
+      ],
+      "allowed_entities": [
+        "AMFI"
+      ],
+      "risks": [
+        "Rupee cost averaging must be attributed to AMFI, not stated as a promise of better returns."
+      ]
+    }
+  ],
+  "selected": {
+    "angle_id": "A1",
+    "selected_by": "Ratnesh",
+    "selected_on": "2026-11-11",
+    "edits": "none"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "reviewer": "Independent fresh agent (subagent a16c5c3f630c131f4)",
+  "independent": true,
+  "script_sha256": "da23611522161ffde510c08e435c7feb2a740164e3df2b8d206203826b4b556f",
+  "beats": [
+    {
+      "id": "B01",
+      "verdict": "supported",
+      "evidence": "F003: 'SIP assets fell 4.1% month-on-month ... in September 2026' supports 'SIP assets fell'. The contributions question is framing, not a claim; no figures added."
+    },
+    {
+      "id": "B02",
+      "verdict": "supported",
+      "evidence": "F003: 'SIP assets fell 4.1% month-on-month to ₹17.86 lakh crore in September 2026'. Percentage, figure and month restated faithfully."
+    },
+    {
+      "id": "B03",
+      "verdict": "supported",
+      "evidence": "F003: 'AMFI attributes the fall mainly to mark-to-market (MTM) losses'. The 'mainly' qualifier and the AMFI attribution are kept."
+    },
+    {
+      "id": "B04",
+      "verdict": "supported",
+      "evidence": "F002: 'Monthly SIP contribution in September 2026 was ₹32,490 crore, up 0.6% from August 2026'. Restated faithfully."
+    },
+    {
+      "id": "B05",
+      "verdict": "supported",
+      "evidence": "F002: 'up 0.6% from August 2026'. 'Up from August 2026' restates this without adding any figure."
+    },
+    {
+      "id": "B06",
+      "verdict": "supported",
+      "evidence": "F004: 'Contributing SIP accounts rose to 10.06 crore in September 2026'. Restated faithfully."
+    },
+    {
+      "id": "B07",
+      "verdict": "supported",
+      "evidence": "F004: 'from 10.02 crore in August 2026'. The August figure is stated correctly."
+    },
+    {
+      "id": "B08",
+      "verdict": "supported",
+      "evidence": "F003 and F002: matches the locked core message and adds nothing beyond the yet/still contrast between the two facts."
+    },
+    {
+      "id": "B09",
+      "verdict": "supported",
+      "evidence": "No factual claim, figure, date or promise. Names only AMFI (an allowed entity), which matches the source on F002, F003 and F004; nothing out of scope."
+    }
+  ]
+}

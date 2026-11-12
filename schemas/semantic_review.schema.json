@@ -1,0 +1,49 @@
+{
+  "type": "object",
+  "required": [
+    "reviewer",
+    "independent",
+    "script_sha256",
+    "beats"
+  ],
+  "properties": {
+    "reviewer": {
+      "type": "string"
+    },
+    "independent": {
+      "type": "boolean"
+    },
+    "script_sha256": {
+      "type": "string"
+    },
+    "beats": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "verdict",
+          "evidence"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "verdict": {
+            "enum": [
+              "supported",
+              "unsupported",
+              "off_topic",
+              "overreach"
+            ]
+          },
+          "evidence": {
+            "type": "string",
+            "minLength": 8
+          }
+        }
+      }
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

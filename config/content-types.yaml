@@ -1,0 +1,74 @@
+# Content types the platform actually has, and starter length budgets for the script.
+# STATUS: standard values accepted for now. Content team can change the numbers any time.
+# Only these eight types are allowed in Step 2 (from the platform's real content types).
+status: standard-values-for-now
+types:
+  carousel:
+    unit: slide
+    beats: {min: 5, max: 10}
+    max_words_total: 220
+    max_words_per_beat: 30
+    output: image_pages
+  infographics:
+    unit: section
+    beats: {min: 3, max: 8}
+    max_words_total: 180
+    max_words_per_beat: 40
+    output: image_pages
+  minimalist:
+    unit: panel
+    beats: {min: 1, max: 3}
+    max_words_total: 40
+    max_words_per_beat: 25
+    output: image_pages
+  reels:
+    unit: scene
+    beats: {min: 4, max: 9}
+    max_words_total: 150        # about 60 seconds spoken
+    max_words_per_beat: 35
+    output: mp4                 # MP4 until a timeline editor exists (see the design doc)
+  videos:
+    unit: scene
+    beats: {min: 6, max: 20}
+    max_words_total: 450        # about 3 minutes spoken
+    max_words_per_beat: 60
+    output: mp4
+  presentation:
+    unit: slide
+    beats: {min: 6, max: 15}
+    max_words_total: 600
+    max_words_per_beat: 80
+    output: image_pages
+  podcasts:
+    unit: segment
+    beats: {min: 5, max: 20}
+    max_words_total: 1500
+    max_words_per_beat: 150
+    output: audio
+  ebooks:
+    unit: section
+    beats: {min: 6, max: 30}
+    max_words_total: 4000
+    max_words_per_beat: 300
+    output: pages
+  one_pager:
+    unit: section
+    beats: {min: 3, max: 8}
+    max_words_total: 260
+    max_words_per_beat: 60
+    output: image_pages
+  reels_short:
+    unit: card
+    beats: {min: 4, max: 7}
+    max_words_total: 45          # on-screen words; most viewers watch with sound off
+    max_words_per_beat: 9
+    max_seconds: 20
+    seconds_per_word: 0.3        # reading time for short on-screen cards (longer for full sentences)
+    output: mp4
+    disclosure: persistent_strip # the SEBI strip stays on every frame; no opening slate (compliance owner to confirm)
+# Format fit by amount of data (content lead decision, 12 Nov 2026).
+format_fit:
+  few_data_points: [minimalist, carousel]     # one or two key numbers
+  many_data_points: [reels, reels_short, videos]
+  reel_on_thin_data: "allowed only with a story or allegory written first; never pad with unlocked numbers"
+

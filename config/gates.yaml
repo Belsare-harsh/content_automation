@@ -1,0 +1,49 @@
+# The steps and the human decision that closes each one. The engine enforces this file.
+# A step cannot be advanced until its checks pass AND its gate has an "approve" decision from an
+# allowed role AND no file has changed since that decision was recorded.
+steps:
+  1:
+    name: Research & Topic Discovery
+    folder: 01_research
+    artifacts: [topic.json, fact_ledger.json]
+    checks: [topic, ledger_final]
+    gate: G1
+  2:
+    name: Content Ideation & Strategy
+    folder: 02_ideation
+    artifacts: [angles.json]
+    checks: [angles_selected]
+    gate: G2
+  3:
+    name: Topic Approval
+    folder: 03_approval
+    artifacts: [locked_brief.json]
+    checks: [lock]
+    gate: G3
+  4:
+    name: Storyline & Scriptwriting
+    folder: 04_script
+    artifacts: [storyline.json, script.json, semantic_review.json]
+    checks: [storyline, script, semantic_review]
+    gate: G4
+  5:
+    name: Design & Visuals
+    folder: 05_design
+    artifacts: [design.json, fabric.json]
+    checks: [design]
+    gate: G5
+  6:
+    name: Animation & Video
+    folder: 06_animation
+    artifacts: [video.json, video.mp4]
+    checks: [video]
+    gate: G6
+    only_for_outputs: [mp4]     # skipped for image formats
+
+gates:
+  G1: {title: "Research review: the human confirms or removes every fact", roles: [researcher, content_lead]}
+  G2: {title: "Angle selection: the human picks and edits the angle", roles: [content_lead]}
+  G3: {title: "Topic approval: the approver locks the message", roles: [topic_approver]}
+  G4: {title: "Script sign-off: the human confirms the script says only what was approved", roles: [content_lead]}
+  G5: {title: "Design sign-off: the human confirms the pages look right and carry the approved words only", roles: [content_lead]}
+  G6: {title: "Video sign-off: the human watches the video and confirms it shows the approved words only", roles: [content_lead]}

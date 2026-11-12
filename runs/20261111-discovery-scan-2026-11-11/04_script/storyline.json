@@ -1,0 +1,51 @@
+{
+  "core_message": "In September 2026 SIP assets fell 4.1%, yet monthly SIP contributions still rose 0.6%.",
+  "locked_brief_sha256": "4188feab0e0fb931e85c00f3a48e1e665007a4a9be5b3ccf4d2d6c16f77f121f",
+  "arc": [
+    {
+      "act": "hook",
+      "purpose": "Pose the question: assets fell, did contributions fall too?",
+      "key_point": null
+    },
+    {
+      "act": "point",
+      "purpose": "State that SIP assets fell 4.1% in September 2026",
+      "key_point": "K1"
+    },
+    {
+      "act": "proof",
+      "purpose": "Give AMFI's stated reason for the fall in SIP assets",
+      "key_point": "K1"
+    },
+    {
+      "act": "point",
+      "purpose": "State that monthly SIP contributions rose 0.6%",
+      "key_point": "K2"
+    },
+    {
+      "act": "proof",
+      "purpose": "Show the rise is measured against August 2026",
+      "key_point": "K2"
+    },
+    {
+      "act": "point",
+      "purpose": "State that contributing SIP accounts rose to 10.06 crore",
+      "key_point": "K3"
+    },
+    {
+      "act": "proof",
+      "purpose": "Give the August 2026 account count for comparison",
+      "key_point": "K3"
+    },
+    {
+      "act": "recap",
+      "purpose": "Restate the locked message word for word",
+      "key_point": null
+    },
+    {
+      "act": "cta",
+      "purpose": "Invite the distributor to save the slide set, no promise",
+      "key_point": null
+    }
+  ]
+}

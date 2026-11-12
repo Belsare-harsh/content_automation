@@ -1,0 +1,13 @@
+# Named people who may make each decision. The engine refuses an approval from anyone not listed
+# for that gate's role, and records name, role, time and a fingerprint of the exact files approved.
+# STATUS: working set. Ratnesh is the topic approver. Ratnesh and Milind can both review facts and
+# pick angles / sign off scripts. Change the lists when roles are split differently.
+roles:
+  researcher: ["Ratnesh", "Milind"]       # may approve the research fact list (Gate 1)
+  content_lead: ["Ratnesh", "Milind"]     # may pick the angle (Gate 2) and sign off the script (Gate 4)
+  topic_approver: ["Ratnesh"]             # formally approves the topic and locks the message (Gate 3)
+
+separation_of_duties:
+  # If true, the person who signs Gate 4 (script) must differ from the one who approved Gate 3 (topic).
+  # With these names that would mean Milind signs scripts. Turn on when you want that.
+  gate4_differs_from_gate3: false

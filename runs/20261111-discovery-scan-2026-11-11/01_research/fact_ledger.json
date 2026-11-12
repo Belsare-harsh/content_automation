@@ -1,0 +1,273 @@
+{
+  "facts": [
+    {
+      "id": "F001",
+      "statement": "AMFI describes a SIP as investing a fixed amount in a mutual fund scheme at regular intervals, such as monthly, instead of making a lump-sum investment.",
+      "numbers": [],
+      "source": {
+        "tier": "tier1",
+        "publisher": "AMFI",
+        "title": "AMFI: Systematic Investment Plan (SIP) page",
+        "url": "https://www.amfiindia.com/mutual-fund",
+        "accessed": "2026-11-11"
+      },
+      "evidence_excerpt": "one could invest a fixed amount in a mutual fund Scheme periodically at fixed intervals",
+      "status": "approved",
+      "added_by": "ai",
+      "reviewed_by": "Ratnesh",
+      "review_note": "F009 'Total during FY' row appears to stop at August (differs from F010 by exactly September's contribution of Rs 32,490 crore); F010 chosen. F007 is older than 120 days; kept as a dated March 2026 comparison only. F006 limited to the two counts; footnote wording not read verbatim."
+    },
+    {
+      "id": "F002",
+      "statement": "Monthly SIP contribution in September 2026 was ₹32,490 crore, up 0.6% from August 2026.",
+      "numbers": [
+        {
+          "raw": "32,490",
+          "as_of": "2026-09-30"
+        },
+        {
+          "raw": "0.6%",
+          "as_of": "2026-09-30"
+        }
+      ],
+      "source": {
+        "tier": "tier1",
+        "publisher": "AMFI",
+        "title": "AMFI Monthly Note, September 2026",
+        "url": "https://www.amfiindia.com/uploads/AMFI_Monthly_Note_September2026_554f6604b6.pdf",
+        "accessed": "2026-11-11",
+        "published": "September 2026 note"
+      },
+      "evidence_excerpt": "amounted to Rs 32,490 crore, marking a 0.6% rise from the preceding month",
+      "status": "approved",
+      "added_by": "ai",
+      "reviewed_by": "Ratnesh",
+      "review_note": "F009 'Total during FY' row appears to stop at August (differs from F010 by exactly September's contribution of Rs 32,490 crore); F010 chosen. F007 is older than 120 days; kept as a dated March 2026 comparison only. F006 limited to the two counts; footnote wording not read verbatim."
+    },
+    {
+      "id": "F003",
+      "statement": "SIP assets fell 4.1% month-on-month to ₹17.86 lakh crore in September 2026, from ₹18.62 lakh crore in August 2026. AMFI attributes the fall mainly to mark-to-market (MTM) losses.",
+      "numbers": [
+        {
+          "raw": "4.1%",
+          "as_of": "2026-09-30"
+        },
+        {
+          "raw": "17.86",
+          "as_of": "2026-09-30"
+        },
+        {
+          "raw": "18.62",
+          "as_of": "2026-09-30"
+        }
+      ],
+      "source": {
+        "tier": "tier1",
+        "publisher": "AMFI",
+        "title": "AMFI Monthly Note, September 2026",
+        "url": "https://www.amfiindia.com/uploads/AMFI_Monthly_Note_September2026_554f6604b6.pdf",
+        "accessed": "2026-11-11",
+        "published": "September 2026 note"
+      },
+      "evidence_excerpt": "reduced 4.1% on a month-on-month basis mainly due to MTM losses",
+      "status": "approved",
+      "added_by": "ai",
+      "reviewed_by": "Ratnesh",
+      "review_note": "F009 'Total during FY' row appears to stop at August (differs from F010 by exactly September's contribution of Rs 32,490 crore); F010 chosen. F007 is older than 120 days; kept as a dated March 2026 comparison only. F006 limited to the two counts; footnote wording not read verbatim."
+    },
+    {
+      "id": "F004",
+      "statement": "Contributing SIP accounts rose to 10.06 crore in September 2026, from 10.02 crore in August 2026.",
+      "numbers": [
+        {
+          "raw": "10.06",
+          "as_of": "2026-09-30"
+        },
+        {
+          "raw": "10.02",
+          "as_of": "2026-09-30"
+        }
+      ],
+      "source": {
+        "tier": "tier1",
+        "publisher": "AMFI",
+        "title": "AMFI Monthly Note, September 2026",
+        "url": "https://www.amfiindia.com/uploads/AMFI_Monthly_Note_September2026_554f6604b6.pdf",
+        "accessed": "2026-11-11",
+        "published": "September 2026 note"
+      },
+      "evidence_excerpt": "active SIP accounts, which rose to 10.06 crore in September",
+      "status": "approved",
+      "added_by": "ai",
+      "reviewed_by": "Ratnesh",
+      "review_note": "F009 'Total during FY' row appears to stop at August (differs from F010 by exactly September's contribution of Rs 32,490 crore); F010 chosen. F007 is older than 120 days; kept as a dated March 2026 comparison only. F006 limited to the two counts; footnote wording not read verbatim."
+    },
+    {
+      "id": "F005",
+      "statement": "SIP assets were about 21.6% of total industry assets under management in September 2026, against 21.4% in August 2026.",
+      "numbers": [
+        {
+          "raw": "21.6%",
+          "as_of": "2026-09-30"
+        },
+        {
+          "raw": "21.4%",
+          "as_of": "2026-09-30"
+        }
+      ],
+      "source": {
+        "tier": "tier1",
+        "publisher": "AMFI",
+        "title": "AMFI Monthly Note, September 2026",
+        "url": "https://www.amfiindia.com/uploads/AMFI_Monthly_Note_September2026_554f6604b6.pdf",
+        "accessed": "2026-11-11",
+        "published": "September 2026 note"
+      },
+      "evidence_excerpt": "constitutes around 21.6% of the industry's total Assets Under Management",
+      "status": "approved",
+      "added_by": "ai",
+      "reviewed_by": "Ratnesh",
+      "review_note": "F009 'Total during FY' row appears to stop at August (differs from F010 by exactly September's contribution of Rs 32,490 crore); F010 chosen. F007 is older than 120 days; kept as a dated March 2026 comparison only. F006 limited to the two counts; footnote wording not read verbatim."
+    },
+    {
+      "id": "F006",
+      "statement": "In September 2026, 63.26 lakh new SIPs were registered and 49.68 lakh SIPs were discontinued or reached the end of their tenure.",
+      "numbers": [
+        {
+          "raw": "63.26",
+          "as_of": "2026-09-30"
+        },
+        {
+          "raw": "49.68",
+          "as_of": "2026-09-30"
+        }
+      ],
+      "source": {
+        "tier": "tier1",
+        "publisher": "AMFI",
+        "title": "AMFI: SIP page, SIP data table (counts in lakh)",
+        "url": "https://www.amfiindia.com/mutual-fund",
+        "accessed": "2026-11-11"
+      },
+      "evidence_excerpt": "Table row Sep-26: new SIPs registered 63.26; discontinued/tenure completed 49.68",
+      "status": "approved",
+      "added_by": "ai",
+      "reviewed_by": "Ratnesh",
+      "review_note": "F009 'Total during FY' row appears to stop at August (differs from F010 by exactly September's contribution of Rs 32,490 crore); F010 chosen. F007 is older than 120 days; kept as a dated March 2026 comparison only. F006 limited to the two counts; footnote wording not read verbatim."
+    },
+    {
+      "id": "F007",
+      "statement": "In March 2026, monthly SIP contribution rose 7.5% on the month to ₹32,087 crore, while SIP assets fell 9.2% to ₹15.11 lakh crore. AMFI attributes the fall to mark-to-market losses from a correction in equity markets.",
+      "numbers": [
+        {
+          "raw": "7.5%",
+          "as_of": "2026-03-31"
+        },
+        {
+          "raw": "32,087",
+          "as_of": "2026-03-31"
+        },
+        {
+          "raw": "9.2%",
+          "as_of": "2026-03-31"
+        },
+        {
+          "raw": "15.11",
+          "as_of": "2026-03-31"
+        }
+      ],
+      "source": {
+        "tier": "tier1",
+        "publisher": "AMFI",
+        "title": "AMFI Monthly Note, March 2026",
+        "url": "https://www.amfiindia.com/uploads/AMFI_Monthly_Note_Mar_2026_1f0a1f5c48.pdf",
+        "accessed": "2026-11-11",
+        "published": "March 2026 note"
+      },
+      "evidence_excerpt": "Due to correction in equity markets causing MTM losses, SIP assets declined by 9.2%",
+      "status": "approved",
+      "added_by": "ai",
+      "reviewed_by": "Ratnesh",
+      "review_note": "F009 'Total during FY' row appears to stop at August (differs from F010 by exactly September's contribution of Rs 32,490 crore); F010 chosen. F007 is older than 120 days; kept as a dated March 2026 comparison only. F006 limited to the two counts; footnote wording not read verbatim."
+    },
+    {
+      "id": "F008",
+      "statement": "AMFI says SIP helps with rupee cost averaging and with investing in a disciplined manner without worrying about market volatility or timing the market.",
+      "numbers": [],
+      "source": {
+        "tier": "tier1",
+        "publisher": "AMFI",
+        "title": "AMFI: Systematic Investment Plan (SIP) page",
+        "url": "https://www.amfiindia.com/mutual-fund",
+        "accessed": "2026-11-11"
+      },
+      "evidence_excerpt": "helps in Rupee Cost Averaging and also in investing in a disciplined manner",
+      "status": "approved",
+      "added_by": "ai",
+      "reviewed_by": "Ratnesh",
+      "review_note": "F009 'Total during FY' row appears to stop at August (differs from F010 by exactly September's contribution of Rs 32,490 crore); F010 chosen. F007 is older than 120 days; kept as a dated March 2026 comparison only. F006 limited to the two counts; footnote wording not read verbatim."
+    },
+    {
+      "id": "F009",
+      "statement": "AMFI's SIP page shows a 'Total during FY' SIP contribution of ₹1,58,108 crore for FY 2026-27.",
+      "numbers": [
+        {
+          "raw": "1,58,108",
+          "as_of": "2026-09-30"
+        }
+      ],
+      "source": {
+        "tier": "tier1",
+        "publisher": "AMFI",
+        "title": "AMFI: SIP page, month-wise contribution table",
+        "url": "https://www.amfiindia.com/mutual-fund",
+        "accessed": "2026-11-11"
+      },
+      "evidence_excerpt": "Table row 'Total during FY', column FY 2026-27: 1,58,108",
+      "status": "rejected",
+      "added_by": "ai",
+      "reviewed_by": "Ratnesh",
+      "review_note": "F009 'Total during FY' row appears to stop at August (differs from F010 by exactly September's contribution of Rs 32,490 crore); F010 chosen. F007 is older than 120 days; kept as a dated March 2026 comparison only. F006 limited to the two counts; footnote wording not read verbatim."
+    },
+    {
+      "id": "F010",
+      "statement": "AMFI's SIP page shows ₹1,90,598 crore of SIP contribution for April to September 2026.",
+      "numbers": [
+        {
+          "raw": "1,90,598",
+          "as_of": "2026-09-30"
+        }
+      ],
+      "source": {
+        "tier": "tier1",
+        "publisher": "AMFI",
+        "title": "AMFI: SIP page, SIP data table",
+        "url": "https://www.amfiindia.com/mutual-fund",
+        "accessed": "2026-11-11"
+      },
+      "evidence_excerpt": "Table row Apr 26-Sep 26: SIP contribution 1,90,598",
+      "status": "approved",
+      "added_by": "ai",
+      "reviewed_by": "Ratnesh",
+      "review_note": "F009 'Total during FY' row appears to stop at August (differs from F010 by exactly September's contribution of Rs 32,490 crore); F010 chosen. F007 is older than 120 days; kept as a dated March 2026 comparison only. F006 limited to the two counts; footnote wording not read verbatim."
+    }
+  ],
+  "conflicts": [
+    {
+      "fact_ids": [
+        "F009",
+        "F010"
+      ],
+      "description": "Two SIP totals for FY 2026-27 on the same AMFI page differ by ₹32,490 crore, which equals September's contribution. The 'Total during FY' row (₹1,58,108 crore) therefore appears to stop at August, while the April to September row (₹1,90,598 crore) includes September. Claude's arithmetic: the six monthly figures April to September sum to ₹1,90,598 crore. A human decides which, if either, may be used.",
+      "resolution": "F010 (April-September row, Rs 1,90,598 crore) is used. F009 rejected: its 'Total during FY' row appears to stop at August. Decision relayed by Deepesh on 2026-11-11.",
+      "resolved_by": "Ratnesh"
+    }
+  ],
+  "open_questions": [
+    "October 2026 SIP figures are not published yet: AMFI's October report has category data only and the SIP page still shows September. Topic uses September as the latest SIP month; refresh if the October note appears before publishing.",
+    "The September note gives two different equity inflow figures (₹38,307 crore and ₹2,34,804 crore). Equity inflows are excluded from this ledger until the content team confirms which is monthly.",
+    "What 'discontinued' counts (F006) is explained in an AMFI footnote that was not read verbatim. Verify the footnote wording on the page before saying why SIPs are discontinued.",
+    "AMFI's September note states no publication date. Figures are dated by the month they cover.",
+    "No source seen explains why contributions rose in a falling month. Scripts must not offer a reason; they can only report the data."
+  ]
+}

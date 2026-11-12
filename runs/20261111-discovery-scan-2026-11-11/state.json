@@ -1,0 +1,15 @@
+{
+  "run_id": "20261111-discovery-scan-2026-11-11",
+  "topic_hint": "Discovery scan 2026-11-11",
+  "mode": "discovery",
+  "created": "2026-11-11T11:40:23+00:00",
+  "created_by": "Deepesh",
+  "step": 4,
+  "status": "complete",
+  "done": [
+    1,
+    2,
+    3,
+    4
+  ]
+}

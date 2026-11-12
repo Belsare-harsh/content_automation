@@ -1,0 +1,207 @@
+{
+ "run": "rmwdezgf7",
+ "status": "draft reel (SOUL v3, 'The Whole Film'); cards cite F001, F002",
+ "slot": "{{PRINCIPAL_NAME}} ({{PRINCIPAL_REG_NO}}) | {{AGENT_NAME}} ({{AGENT_REG_NO}})",
+ "frames": 574,
+ "audio": "silent/score.wav",
+ "shots": [
+  {
+   "kind": "card",
+   "from": 0,
+   "to": 75,
+   "level": 0,
+   "shake": 0.5,
+   "fact_ids": [
+    "F001",
+    "F002"
+   ],
+   "text": "SIP money dipped in October.",
+   "lines": [
+    {
+     "text": "SIP money dipped",
+     "size": 101,
+     "title": true
+    },
+    {
+     "text": "in October.",
+     "size": 101,
+     "title": true
+    }
+   ],
+   "print": {
+    "strength": 0.75,
+    "sepia": 0.1,
+    "scratches": 0.35
+   }
+  },
+  {
+   "kind": "card",
+   "from": 75,
+   "to": 165,
+   "level": 1,
+   "fact_ids": [
+    "F001",
+    "F002"
+   ],
+   "text": "₹32,490 crore in September. ₹32,160 crore in October.",
+   "lines": [
+    {
+     "text": "₹32,490 crore",
+     "size": 104,
+     "title": true
+    },
+    {
+     "text": "in September.",
+     "size": 68,
+     "italic": true
+    },
+    {
+     "text": "₹32,160 crore",
+     "size": 104,
+     "title": true
+    },
+    {
+     "text": "in October.",
+     "size": 68,
+     "italic": true
+    }
+   ],
+   "print": {
+    "strength": 0.7,
+    "sepia": 0.12,
+    "scratches": 0.3
+   }
+  },
+  {
+   "kind": "card",
+   "from": 165,
+   "to": 228,
+   "level": 1,
+   "text": "Now zoom out one year.",
+   "lines": [
+    {
+     "text": "Now zoom out",
+     "size": 98,
+     "italic": true
+    },
+    {
+     "text": "one year.",
+     "size": 98,
+     "italic": true
+    }
+   ],
+   "print": {
+    "strength": 0.6,
+    "sepia": 0.2,
+    "scratches": 0.4
+   }
+  },
+  {
+   "kind": "scene",
+   "from": 228,
+   "to": 318,
+   "text": "",
+   "print": {
+    "strength": 0.5,
+    "sepia": 0.26
+   }
+  },
+  {
+   "kind": "card",
+   "from": 318,
+   "to": 408,
+   "level": 1,
+   "fact_ids": [
+    "F001",
+    "F002"
+   ],
+   "text": "October 2025: ₹29,529 crore. October 2026: ₹32,160 crore.",
+   "lines": [
+    {
+     "text": "October 2025:",
+     "size": 65,
+     "italic": true
+    },
+    {
+     "text": "₹29,529 crore.",
+     "size": 104,
+     "title": true
+    },
+    {
+     "text": "October 2026:",
+     "size": 65,
+     "italic": true
+    },
+    {
+     "text": "₹32,160 crore.",
+     "size": 104,
+     "title": true
+    }
+   ],
+   "print": {
+    "strength": 0.4,
+    "sepia": 0.3,
+    "scratches": 0.25
+   }
+  },
+  {
+   "kind": "card",
+   "from": 408,
+   "to": 498,
+   "level": 2,
+   "text": "One month is one frame. Look at more than one.",
+   "lines": [
+    {
+     "text": "One month is",
+     "size": 86,
+     "italic": true
+    },
+    {
+     "text": "one frame.",
+     "size": 86,
+     "italic": true
+    },
+    {
+     "text": "Look at more than one.",
+     "size": 70,
+     "title": true
+    }
+   ],
+   "print": {
+    "strength": 0.38,
+    "sepia": 0.34,
+    "scratches": 0.25
+   }
+  },
+  {
+   "kind": "card",
+   "from": 498,
+   "to": 574,
+   "level": 1,
+   "fact_ids": [],
+   "text": "Save this for the next headline. Source: AMFI",
+   "lines": [
+    {
+     "text": "Save this for the",
+     "size": 81,
+     "italic": true
+    },
+    {
+     "text": "next headline.",
+     "size": 81,
+     "italic": true
+    },
+    {
+     "text": "Source: AMFI",
+     "size": 48,
+     "title": true
+    }
+   ],
+   "print": {
+    "strength": 0.36,
+    "sepia": 0.34,
+    "scratches": 0.25
+   }
+  }
+ ]
+}

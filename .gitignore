@@ -1,0 +1,6 @@
+node_modules/
+__pycache__/
+.pytest_cache/
+work/
+*.mp4
+tools/remotion/out/
