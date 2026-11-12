@@ -33,6 +33,15 @@ Read `ORCHESTRATOR.md` (rules you never break) and the skill for each step you r
 
 ## 3. Steps
 
+### feed (the live feed on the intake page)
+Runs when `jobs/feed-refresh` is queued, **and** on any run of this task where `config/feed.refreshed_at` is more than 6 hours old.
+- Follow `skills/shared-market-watch/SKILL.md`. Scan only `config/sources` domains: tier 1 for items, tier 3 to notice what people talk about. Look at the last 30 days.
+- Write 6 to 10 items as `feed/f-<slug>` (do not overwrite items whose `status` is `picked` or `dismissed`):
+  `{title, summary (your own words, 1 to 2 sentences), source, url, published, tier, pillar (from config/writer pillars), why, figures: [each figure as the source writes it], data_points: len(figures), format_hint, risk, status: "new", found_by: "Claude worker", found_on}`.
+- format_hint follows the format-fit rule: 4+ data points → `reels`; 2 to 3 → `carousel`; 0 to 1 → `minimalist` (a reel on thin data needs a story or allegory).
+- Never name a scheme or fund house as the hook; never predict. Items are leads: research re-verifies every figure.
+- Then `set` `config/feed`: `{refreshed_at, refreshed_by: "Claude worker", sources, note}`, and mark the feed job `done`.
+
 ### research (step 1)
 - Follow `skills/01-research/SKILL.md` section 1b, with the run's `topic`, `audience`, `scope` and `intake.focus`.
   In discovery mode, follow its discovery section and write the candidates to `runs/<id>` as `open_questions` instead of stopping.
