@@ -13,6 +13,9 @@ cd <this repo> && sh worker/setup.sh
 ```
 Read `ORCHESTRATOR.md` (rules you never break) and the skill for each step you run.
 
+## Times
+Every timestamp you write (started_at, finished_at, refreshed_at, found_on) comes from the clock: run `date -u +%Y-%m-%dT%H:%M:%SZ` (or `date -u +%F` for dates). Never estimate or invent a time.
+
 ## 1. Find work
 
 1. `db_list` collection `jobs` on the console artifact.
